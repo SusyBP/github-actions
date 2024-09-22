@@ -1,0 +1,15 @@
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\bin\Release\net8.0\HelloWorldApp.exe
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\bin\Release\net8.0\HelloWorldApp.deps.json
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\bin\Release\net8.0\HelloWorldApp.runtimeconfig.json
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\bin\Release\net8.0\HelloWorldApp.dll
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\bin\Release\net8.0\HelloWorldApp.pdb
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.AssemblyInfoInputs.cache
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.AssemblyInfo.cs
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.csproj.CoreCompileInputs.cache
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.sourcelink.json
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.dll
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\refint\HelloWorldApp.dll
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.pdb
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\HelloWorldApp.genruntimeconfig.cache
+C:\Users\susana\source\repos\PLATZI\Curso Github Actions\github-actions\HelloWorldApp\obj\Release\net8.0\ref\HelloWorldApp.dll
