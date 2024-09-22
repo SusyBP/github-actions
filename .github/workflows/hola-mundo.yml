@@ -3,18 +3,13 @@ name: .NET Core Hello World
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   hello-world:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./srcHelloWorldApp
+        working-directory: ./HelloWorldApp
 
     steps:
       - name: Checkout repository
