@@ -14,17 +14,17 @@ on:
   workflow-dispatch: #manually trigger the workflow
     inputs:
       favorite_ide:
-        descriptions: 'IDE favorito'
+        description: 'IDE favorito'  # Corrected from 'descriptions' to 'description'
         default: VS Code
         required: true
         type: choice
         options:
-        - Sublime Text
-        - WebStorm
-        - VS Code
-        - Atom 
-        - PyCharm
-        - Jupyter Notebook  
+          - Sublime Text
+          - WebStorm
+          - VS Code
+          - Atom 
+          - PyCharm
+          - Jupyter Notebook  
       nombre:
         description: 'Tu nombre'
         required: true
@@ -35,5 +35,5 @@ jobs:
     if: ${{ inputs.favorite_ide == "VS Code" }}
     runs-on: ubuntu-latest
     steps:
-    - name : Run script
+      - name: Run script  # Indentation fixed here
         run: echo ${{ inputs.nombre }} has a good taste in IDEs!
