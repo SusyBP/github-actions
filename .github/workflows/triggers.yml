@@ -1,0 +1,40 @@
+name: Triggers
+run-name: Learning different triggers!
+on:
+  push:
+    branches:
+      - 'aprendiendo-github-actions'
+  pull-request:
+    types:
+      - [opened, labeled]
+    branches:
+      - 'aprendiendo-github-actions'
+    paths:
+      - '**.cs'    
+  workflow-dispatch: #manually trigger the workflow
+    inputs:
+      favorite_ide:
+        descriptions: 'IDE favorito'
+        default: VS Code
+        required: true
+        type: choice
+        options:
+        - Sublime Text
+        - WebStorm
+        - VS Code
+        - Atom 
+        - PyCharm
+        - Jupyter Notebook   
+      nombre:
+				description: 'Tu nombre'
+				required: true
+				default: 'Susana'
+				type: string  
+jobs:
+  verify_ide_preference:
+		if: ${{ inputs.favorite_ide == "VS Code" }}
+		runs-on: ubuntu-latest
+		steps:
+			- name : Run script
+				run: echo ${{ inputs.nombre }} has a good taste in IDEs!         
+    
