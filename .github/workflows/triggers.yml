@@ -1,21 +1,23 @@
 name: Triggers
 run-name: Learning different triggers!
+
 on:
   push:
     branches:
       - 'aprendiendo-github-actions'
-  pull-request:
+  pull_request:  # Fixed the syntax from pull-request to pull_request
     types:
-      - [opened, labeled]
+      - opened
+      - labeled
     branches:
       - 'aprendiendo-github-actions'
     paths:
-      - '**.cs'    
-  workflow-dispatch: #manually trigger the workflow
+      - '**/*.cs'  # Fixed pattern to match all .cs files in any directory
+  workflow_dispatch:  # Manually trigger the workflow
     inputs:
       favorite_ide:
         description: 'IDE favorito'  # Corrected from 'descriptions' to 'description'
-        default: VS Code
+        default: 'VS Code'  # Added quotes to the default value
         required: true
         type: choice
         options:
@@ -28,12 +30,13 @@ on:
       nombre:
         description: 'Tu nombre'
         required: true
-        default: 'Susana'
+        default: 'Susana'  # Added quotes to the default value
         type: string  
+
 jobs:
   verify_ide_preference:
-    if: ${{ inputs.favorite_ide == "VS Code" }}
+    if: ${{ inputs.favorite_ide == 'VS Code' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Run script  # Indentation fixed here
-        run: echo ${{ inputs.nombre }} has a good taste in IDEs!
+      - name: Run script
+        run: echo "${{ inputs.nombre }} has a good taste in IDEs!"
