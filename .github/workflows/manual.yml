@@ -1,0 +1,14 @@
+name: 'Manual Workflow'
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        type: string
+        default: 'Default value'
+jobs:
+  manual:
+    runs-on: ubunto-latest
+    steps:
+      - name: Greetings
+        run: echo "${{ inputs.name }}"

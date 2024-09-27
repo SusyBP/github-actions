@@ -1,0 +1,23 @@
+name: Triggers
+run-name: Learning different triggers!
+
+on:
+  workflow_dispatch:
+    inputs:
+      favorite_ide:
+        description: 'IDE favorito'
+        default: 'VS Code'
+        required: true
+        type: string
+      nombre:
+        description: 'Tu nombre'
+        required: true
+        default: 'Susana'
+        type: string  
+
+jobs:
+  verify_ide_preference:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run script
+        run: echo "${{ github.event.inputs.nombre }} has a good taste in IDEs!"  # Corrected input reference
