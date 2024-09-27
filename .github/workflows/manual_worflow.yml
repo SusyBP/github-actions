@@ -3,12 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       name:
-      description: 'Name'
-      type: string,
-      default: 'test'
+       description: 'Name'
+       type: string
+       default: 'default value'
 jobs:
   manual:
     runs-on: ubuntu-latest
     steps:
       - name: Greetings
-        run: echo "${{ inputs.name }}"
+        run: echo "Hello, ${{ inputs.name }}!"
