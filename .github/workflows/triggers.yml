@@ -17,7 +17,6 @@ on:
 
 jobs:
   verify_ide_preference:
-    if: ${{ github.event.inputs.favorite_ide == 'VS Code' }}  # Corrected input reference
     runs-on: ubuntu-latest
     steps:
       - name: Run script
