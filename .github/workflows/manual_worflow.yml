@@ -1,14 +1,16 @@
 name: 'Manual'
+
 on:
   workflow_dispatch:
     inputs:
       name:
-       description: 'Name'
-       type: string
-       default: 'default value'
+        description: 'Name'  # Indentation and syntax fixed
+        type: string  # Removed the comma (`,`); YAML uses new lines for separate properties
+        default: 'test'
+
 jobs:
   manual:
     runs-on: ubuntu-latest
     steps:
       - name: Greetings
-        run: echo "Hello, ${{ inputs.name }}!"
+        run: echo "Hello, ${{ github.event.inputs.name }}!"
