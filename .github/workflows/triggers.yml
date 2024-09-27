@@ -4,13 +4,11 @@ run-name: Learning different triggers!
 on:
   push:
     branches:
-      - 'aprendiendo-github-actions'
+      - aprendiendo-github-actions
   pull_request:  # Fixed the syntax from pull-request to pull_request
-    types:
-      - opened
-      - labeled
+    types: [ opened, labeled ]
     branches:
-      - 'aprendiendo-github-actions'
+      - aprendiendo-github-actions
     paths:
       - '**/*.cs'  # Fixed pattern to match all .cs files in any directory
   workflow_dispatch:  # Manually trigger the workflow
@@ -20,19 +18,11 @@ on:
         default: 'VS Code'  # Added quotes to the default value
         required: true
         type: string
-        options:
-          - Sublime Text
-          - WebStorm
-          - VS Code
-          - Atom 
-          - PyCharm
-          - Jupyter Notebook  
       nombre:
         description: 'Tu nombre'
         required: true
         default: 'Susana'  # Added quotes to the default value
         type: string  
-
 jobs:
   verify_ide_preference:
     if: ${{ inputs.favorite_ide == 'VS Code' }}
