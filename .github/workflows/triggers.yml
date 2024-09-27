@@ -19,7 +19,7 @@ on:
         description: 'IDE favorito'  # Corrected from 'descriptions' to 'description'
         default: 'VS Code'  # Added quotes to the default value
         required: true
-        type: choice
+        type: string
         options:
           - Sublime Text
           - WebStorm
