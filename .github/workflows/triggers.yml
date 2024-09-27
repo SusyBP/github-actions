@@ -2,22 +2,32 @@ name: Triggers
 run-name: Learning different triggers!
 
 on:
-  workflow_dispatch:  # Manually trigger the workflow
+  push:
+    branches:
+      - aprendiendo-github-actions
+  pull_request:
+    types: [opened, labeled]
+    branches:
+      - aprendiendo-github-actions
+    paths:
+      - '**/*.cs'
+  workflow_dispatch:
     inputs:
       favorite_ide:
-        description: 'IDE favorito'  # Corrected from 'descriptions' to 'description'
-        default: 'VS Code'  # Added quotes to the default value
+        description: 'IDE favorito'
+        default: 'VS Code'
         required: true
         type: string
       nombre:
         description: 'Tu nombre'
         required: true
-        default: 'Susana'  # Added quotes to the default value
+        default: 'Susana'
         type: string  
+
 jobs:
   verify_ide_preference:
-    if: ${{ inputs.favorite_ide == 'VS Code' }}
+    if: ${{ github.event.inputs.favorite_ide == 'VS Code' }}  # Corrected input reference
     runs-on: ubuntu-latest
     steps:
       - name: Run script
-        run: echo "${{ inputs.nombre }} has a good taste in IDEs!"
+        run: echo "${{ github.event.inputs.nombre }} has a good taste in IDEs!"  # Corrected input reference
